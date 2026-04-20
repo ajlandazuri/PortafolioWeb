@@ -4893,8 +4893,15 @@ nav {
 }
 
 @media (max-width: 480px) {
+    .data-text {
+        flex: 1;
+        min-width: 0;
+    }
+
     .data-value {
         font-size: 0.8rem;
+        line-height: 1.4;
+        word-break: break-word;
     }
 
     .social-icon-row {
@@ -4913,6 +4920,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     border: none;
     background-color: transparent;
     position: relative;
