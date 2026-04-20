@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Professional Portfolio</title>
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Theme Guard: Apply theme immediately -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+
+<body class="project-detail-page">
+    <!-- Animated Mesh Background (IDENTICAL TO HOME) -->
+    <div class="bg-aurora">
+        <div class="bg-grid"></div>
+        <div id="particles-container"></div>
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+        <div class="aurora-blob blob-4"></div>
+        <!-- Elite Cinematic Layers -->
+        <div class="starfield"></div>
+        <div class="wireframe-container"></div>
+        <div class="scanlines"></div>
+        <!-- Neo-Cyber HUD Layers -->
+        <div id="binary-rain"></div>
+        <div id="pulse-rings"></div>
+        <div class="hex-grid"></div>
+        <div id="circuit-container"></div>
+    </div>
+
+    <!-- Back Navigation -->
+    <nav class="detail-nav container">
+        <a href="index.html#projects" class="back-link">
+            <i data-lucide="arrow-left"></i>
+            <span data-i18n="detail_back">Back to Projects</span>
+        </a>
+        <div class="breadcrumb">
+            <a href="index.html" data-i18n="detail_breadcrumb_portfolio">Portfolio</a>
+            <span class="sep">/</span>
+            <span class="current-page" data-i18n="detail_breadcrumb_current">Project Detail</span>
+        </div>
+    </nav>
+
+    <main id="project-detail-content" class="container">
+        <!-- Content will be injected by JavaScript -->
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p class="footer-text">&copy; 2026 Andy Jhoel Landázuri Ruales | <span data-i18n="hero_profession">Software Engineer</span></p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="translations.js?v=3"></script>
+    <script src="i18n-core.js?v=3"></script>
+    <script src="projects-data.js?v=1"></script>
+    <script src="script.js?v=2"></script>
+    <script>
+        // Specific detail page logic
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) window.lucide.createIcons();
+
+            // Extract project ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+
+            // Function is defined in script.js to load the specific project
+            if (typeof loadProjectDetails === 'function') {
+                loadProjectDetails(projectId);
+            }
+        });
+    </script>
+</body>
+
+</html>

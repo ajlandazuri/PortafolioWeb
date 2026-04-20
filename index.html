@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional | Portafolio Premium</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Theme Guard: Apply theme immediately to prevent flashing -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Animated Mesh Background -->
+    <div class="bg-aurora">
+        <div class="bg-grid"></div>
+        <div id="particles-container"></div>
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+        <div class="aurora-blob blob-4"></div>
+        <!-- Elite Cinematic Layers -->
+        <div class="starfield"></div>
+        <div class="wireframe-container"></div>
+        <div class="scanlines"></div>
+        <!-- Neo-Cyber HUD Layers -->
+        <div id="binary-rain"></div>
+        <div id="pulse-rings"></div>
+        <div class="hex-grid"></div>
+        <div id="circuit-container"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch">
+                        <input class="theme-switch__checkbox" id="theme-toggle" type="checkbox" />
+                        <div class="theme-switch__container">
+                            <div class="theme-switch__clouds"></div>
+                            <div class="theme-switch__stars-container">
+                                <svg fill="none" viewBox="0 0 144 55" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                                        clip-rule="evenodd" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="theme-switch__circle-container">
+                                <div class="theme-switch__sun-moon-container">
+                                    <div class="theme-switch__moon">
+                                        <div class="theme-switch__spot"></div>
+                                        <div class="theme-switch__spot"></div>
+                                        <div class="theme-switch__spot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theme-switch__shooting-star"></div>
+                            <div class="theme-switch__shooting-star-2"></div>
+                            <div class="theme-switch__meteor"></div>
+                            <div class="theme-switch__stars-cluster">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                            <div class="theme-switch__aurora"></div>
+                            <div class="theme-switch__comets">
+                                <div class="comet"></div>
+                                <div class="comet"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon"></i>
+                </button>
+                <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About Me</a></li>
+                        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                        <li><a href="#certifications" data-i18n="nav_certifications">Certifications</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                    <div class="nav-cv-wrapper">
+                        <!-- Language Toggle Button -->
+                        <button id="lang-toggle" class="nav-btn-pill lang-btn">
+                            <i data-lucide="globe"></i>
+                            <span id="lang-text">EN</span>
+                        </button>
+                        <!-- CV Download Button -->
+                        <a href="assets/CV.pdf" target="_blank" rel="noopener noreferrer"
+                            download="CV_Andy_Landazuri.pdf" class="nav-btn-pill">
+                            <i data-lucide="download"></i>
+                            <span>CV</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <!-- ============================================== -->
+        <!--                  HERO SECTION                  -->
+        <!-- ============================================== -->
+        <section id="hero" class="hero anim-section anim-fade-up">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title reveal" data-i18n="hero_title">
+                        Welcome to<br>my <span class="accent-text">Portfolio</span><br>Website
+                    </h1>
+                    <p class="hero-tagline reveal">
+                        <span id="typewriter"></span><span class="cursor">|</span>
+                    </p>
+                    <p class="hero-description reveal" data-i18n="hero_description">
+                        I design and implement technological solutions aimed at optimizing processes, analyzing
+                        information, and supporting decision-making.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+                            <i data-lucide="layers" style="width: 18px; margin-right: 8px;"></i>
+                            <span data-i18n="hero_btn_projects">View Projects</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+                            <i data-lucide="mail" style="width: 18px; margin-right: 8px;"></i>
+                            <span data-i18n="hero_btn_contact">Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="visual-container">
+                        <dotlottie-wc src="https://lottie.host/226311b9-dd5b-45ab-8701-5556a2938c04/dHWI9VlFxq.json"
+                            background="transparent" speed="1" loop autoplay
+                            class="hero-visual-dotlottie"></dotlottie-wc>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <!-- ============================================== -->
+        <!--                 ABOUT SECTION                  -->
+        <!-- ============================================== -->
+        <section id="about" class="section reveal anim-section anim-fade-up">
+            <div class="container">
+                <div class="section-header-centered reveal">
+                    <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                    <p class="section-subtitle" data-i18n="about_subtitle">Transforming data into strategic solutions
+                    </p>
+                </div>
+
+                <div class="about-main-grid">
+                    <h3 class="bio-greeting reveal anim-section anim-fade-up">
+                        <span class="accent-text" data-i18n="about_greeting_prefix"
+                            style="color: var(--accent-primary); display: block; font-size: 0.85em; margin-bottom: 0.3rem;">Hello,
+                            I'm</span>
+                        <span style="color: var(--text-primary); display: block;">Andy Jhoel Landázuri Ruales</span>
+                    </h3>
+
+                    <div class="about-bio anim-slide-left">
+                        <div class="bio-body">
+                            <p data-i18n="about_bio_1">Software Engineer specialized in developing robust applications
+                                and designing data
+                                intelligence solutions that optimize strategic decision-making.
+                            </p>
+                            <p data-i18n="about_bio_2">I am passionate about transforming complex datasets into clear
+                                visualizations and
+                                functional tools that generate real value.</p>
+                            <div class="about-btns">
+                                <a href="#skills" class="btn btn-outline btn-sm" data-i18n="about_btn_skills">View
+                                    Skills <i data-lucide="code"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-photo anim-slide-right">
+                        <div class="photo-container">
+                            <div class="photo-aura"></div>
+                            <div class="photo-circle">
+                                <div class="profile-image-bg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats-horizontal">
+                    <a href="#projects" class="stat-link-h">
+                        <div class="stat-card-h anim-fade-up">
+                            <div class="stat-icon-h"><i data-lucide="folder-check"></i></div>
+                            <div class="stat-info-h">
+                                <span class="stat-number-h">8+</span>
+                                <span class="stat-label-h" data-i18n="stat_projects_label">Developed Projects</span>
+                                <p class="stat-desc-h" data-i18n="stat_projects_desc">Successful deliveries</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#certifications" class="stat-link-h">
+                        <div class="stat-card-h anim-fade-up">
+                            <div class="stat-icon-h"><i data-lucide="award"></i></div>
+                            <div class="stat-info-h">
+                                <span class="stat-number-h">12+</span>
+                                <span class="stat-label-h" data-i18n="stat_certs_label">Certifications</span>
+                                <p class="stat-desc-h" data-i18n="stat_certs_desc">Internationally validated</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#experience" class="stat-link-h">
+                        <div class="stat-card-h anim-fade-up">
+                            <div class="stat-icon-h"><i data-lucide="calendar"></i></div>
+                            <div class="stat-info-h">
+                                <span class="stat-number-h">1+</span>
+                                <span class="stat-label-h" data-i18n="stat_exp_label">Years Experience</span>
+                                <p class="stat-desc-h" data-i18n="stat_exp_desc">Professional growth</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <!-- ============================================== -->
+        <!--                 SKILLS SECTION                 -->
+        <!-- ============================================== -->
+        <section id="skills" class="section reveal anim-section anim-fade-up">
+            <div class="container">
+                <div class="skills-header">
+                    <h2 class="section-title" data-i18n="skills_title">Skills Details</h2>
+                </div>
+
+                <!-- Filters -->
+                <div class="skills-filters">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                    <button class="filter-btn" data-filter="frontend" data-i18n="filter_frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend" data-i18n="filter_backend">Backend</button>
+                    <button class="filter-btn" data-filter="tools" data-i18n="filter_tools">Tools & Tech</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <!-- Skills Grid -->
+                <div class="skills-container">
+                    <!-- FRONTEND (most used first) -->
+                    <!-- 1. HTML5 -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
+                        <div class="skill-info"><h4>HTML5</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 2. CSS3 -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
+                        <div class="skill-info"><h4>CSS3</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 3. JavaScript -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+                        <div class="skill-info"><h4>JavaScript</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 4. React -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+                        <div class="skill-info"><h4>React</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 5. Vue.js -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"></div>
+                        <div class="skill-info"><h4>Vue.js</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 6. Power BI -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="23" y="58" width="18" height="60" fill="#E9B23E"/>
+                                <rect x="55" y="32" width="18" height="86" fill="#F2C811"/>
+                                <rect x="87" y="10" width="18" height="108" fill="#F9D700"/>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>Power BI</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 7. Flutter -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"></div>
+                        <div class="skill-info"><h4>Flutter</h4><span>Frontend</span></div>
+                    </div>
+                    <!-- 8. UI/UX -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="frontend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="UI/UX"></div>
+                        <div class="skill-info"><h4>UI/UX</h4><span>Frontend</span></div>
+                    </div>
+
+                    <!-- BACKEND (most used first) -->
+                    <!-- 1. Python -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+                        <div class="skill-info"><h4>Python</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 2. .NET / ASP.NET -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="64" cy="64" r="64" fill="#512BD4"/>
+                                <text x="64" y="80" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="white" text-anchor="middle">.NET</text>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>.NET / ASP.NET</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 3. Node.js -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
+                        <div class="skill-info"><h4>Node.js</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 4. Java -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div>
+                        <div class="skill-info"><h4>Java</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 5. PHP -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"></div>
+                        <div class="skill-info"><h4>PHP</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 6. FastAPI -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"></div>
+                        <div class="skill-info"><h4>FastAPI</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 7. ETL -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 30h30v30H30z" fill="#3b82f6" opacity=".8"/>
+                                <path d="M68 68h30v30H68z" fill="#10b981" opacity=".8"/>
+                                <path d="M45 45l38 38" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+                                <path d="M83 45l5 38-38-5" fill="none" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+                                <circle cx="45" cy="45" r="8" fill="#ef4444"/>
+                                <circle cx="83" cy="83" r="8" fill="#8b5cf6"/>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>ETL</h4><span>Backend</span></div>
+                    </div>
+                    <!-- 8. DAX -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="backend">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="128" height="128" rx="18" fill="#F2C811"/>
+                                <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#1E1E1E">DAX</text>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>DAX</h4><span>Backend</span></div>
+                    </div>
+
+                    <!-- TOOLS & TECH (most used first) -->
+                    <!-- 1. Git -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+                        <div class="skill-info"><h4>Git</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 2. GitHub -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);"></div>
+                        <div class="skill-info"><h4>GitHub</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 3. PostgreSQL -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"></div>
+                        <div class="skill-info"><h4>PostgreSQL</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 4. MySQL -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
+                        <div class="skill-info"><h4>MySQL</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 5. VS Code -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"></div>
+                        <div class="skill-info"><h4>VS Code</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 6. Postman -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman"></div>
+                        <div class="skill-info"><h4>Postman</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 7. Firebase -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"></div>
+                        <div class="skill-info"><h4>Firebase</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 8. Oracle DB -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle Database"></div>
+                        <div class="skill-info"><h4>Oracle DB</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 9. AWS -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" style="filter: invert(1);"></div>
+                        <div class="skill-info"><h4>AWS</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 10. Azure -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"></div>
+                        <div class="skill-info"><h4>Azure</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 11. Figma -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"></div>
+                        <div class="skill-info"><h4>Figma</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 12. Android Studio -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"></div>
+                        <div class="skill-info"><h4>Android Studio</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 13. Linux -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
+                        <div class="skill-info"><h4>Linux</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 14. SharePoint -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5 14L2 15.5L3.5 2L11.5 0.5V14Z" fill="#0072C6"/>
+                                <path d="M11.5 14L21 15.5L19.5 2L11.5 0.5V14Z" fill="#00A1F1"/>
+                                <path d="M11.5 14L2 23.5L3.5 14H11.5V23.5Z" fill="#004C87"/>
+                                <path d="M11.5 14L21 23.5L19.5 14H11.5V23.5Z" fill="#0072C6"/>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>SharePoint</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 15. SPSS -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="128" height="128" rx="18" fill="#054ADA"/>
+                                <rect x="18" y="72" width="16" height="36" rx="3" fill="#FFFFFF"/>
+                                <rect x="42" y="52" width="16" height="56" rx="3" fill="#FFFFFF"/>
+                                <rect x="66" y="32" width="16" height="76" rx="3" fill="#FFFFFF"/>
+                                <rect x="90" y="44" width="16" height="64" rx="3" fill="#FFFFFF"/>
+                                <polyline points="26,68 50,48 74,28 98,40" fill="none" stroke="#6BDDFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>SPSS</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                    <!-- 16. MAXQDA -->
+                    <div class="skill-card anim-section anim-fade-up" data-category="tools">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="128" height="128" rx="18" fill="#1A1A2E"/>
+                                <rect x="10" y="10" width="26" height="54" rx="4" fill="#E63946"/>
+                                <rect x="40" y="10" width="26" height="54" rx="4" fill="#F4A261"/>
+                                <rect x="70" y="10" width="26" height="54" rx="4" fill="#2A9D8F"/>
+                                <rect x="10" y="68" width="86" height="26" rx="4" fill="#457B9D"/>
+                                <rect x="100" y="10" width="18" height="84" rx="4" fill="#6A4C93"/>
+                            </svg>
+                        </div>
+                        <div class="skill-info"><h4>MAXQDA</h4><span>Tools &amp; Tech</span></div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="skills-load-more anim-section anim-fade-up">
+                    <button id="load-more-skills" class="btn btn-outline" style="padding: 0.8rem 2rem; display: flex; align-items: center; gap: 0.6rem; font-weight: 600;">
+                        <span id="load-more-skills-text" data-i18n="show_more">Show More</span>
+                        <i data-lucide="chevron-down" id="load-more-skills-icon" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience/Trajectory -->
+        <!-- ============================================== -->
+        <!--              EXPERIENCE SECTION                -->
+        <!-- ============================================== -->
+        <section id="experience" class="section reveal anim-section anim-fade-up">
+            <div class="container">
+                <h2 class="section-title" data-i18n="experience_title">Professional Experience</h2>
+                <div class="timeline">
+                    <!-- BI Project -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date" data-i18n="exp_airmax_date">June 2024 - March 2025</span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp_airmax_title">Business Intelligence Project</h3>
+                            <span class="role" data-i18n="exp_airmax_role">AIRMAXTELECOM S.A. â€” Degree Project</span>
+                            <p data-i18n="exp_airmax_desc">Design and implementation of a Business Intelligence solution
+                                for ticket management system analysis, improving operational decision-making.</p>
+                            <ul class="timeline-details">
+                                <li data-i18n="exp_airmax_item1">Management process analysis using process diagrams.
+                                </li>
+                                <li data-i18n="exp_airmax_item2">Development of ETL processes for data extraction,
+                                    cleaning, and transformation.</li>
+                                <li data-i18n="exp_airmax_item3">Definition and calculation of KPIs for technical
+                                    support analysis.</li>
+                                <li data-i18n="exp_airmax_item4">Interactive dashboard design and evaluation through the
+                                    UTAUT model.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Internships -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date" data-i18n="exp_flores_date">November 2023 - December 2023</span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp_flores_title">Internships â€” Commercial Area</h3>
+                            <span class="role" data-i18n="exp_flores_role">Importadora Automotriz Flores</span>
+                            <p data-i18n="exp_flores_desc">Support in administrative processes and information
+                                management within the company's
+                                commercial area.</p>
+                            <ul class="timeline-details">
+                                <li data-i18n="exp_flores_item1">Customer service and advisory during the sales process.
+                                </li>
+                                <li data-i18n="exp_flores_item2">Control and organization of automotive product
+                                    inventory.</li>
+                                <li data-i18n="exp_flores_item3">Merchandise registration and verification in the
+                                    inventory system.</li>
+                                <li data-i18n="exp_flores_item4">Support in sales tracking and administrative processes.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pre-professional Internships -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date" data-i18n="exp_utn_date">March 2024 - May 2024</span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp_utn_title">Pre-professional Internships</h3>
+                            <span class="role" data-i18n="exp_utn_role">Technical Department - FICA UTN</span>
+                            <p data-i18n="exp_utn_desc">Support and maintenance of institutional technological
+                                infrastructure and academic
+                                platforms.</p>
+                            <ul class="timeline-details">
+                                <li data-i18n="exp_utn_item1">Monitoring and diagnosis of Hikvision video surveillance
+                                    (CCTV).</li>
+                                <li data-i18n="exp_utn_item2">LAN network support and connectivity verification.</li>
+                                <li data-i18n="exp_utn_item3">Management and update of the teaching module in Moodle.
+                                </li>
+                                <li data-i18n="exp_utn_item4">Error correction in management systems using Python.</li>
+                                <li data-i18n="exp_utn_item5">Development of SQL queries for institutional databases.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Community Outreach -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date" data-i18n="exp_eppa_date">October 2023 - December 2023</span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp_eppa_title">Community Outreach</h3>
+                            <span class="role" data-i18n="exp_eppa_role">EPPA-AA â€” Social Service</span>
+                            <p data-i18n="exp_eppa_desc">Support in digitalization processes and organization of
+                                institutional information to
+                                strengthen data management.</p>
+                            <ul class="timeline-details">
+                                <li data-i18n="exp_eppa_item1">Organization and digitalization for digital storage and
+                                    consultation.</li>
+                                <li data-i18n="exp_eppa_item2">Management and update of institutional databases.</li>
+                                <li data-i18n="exp_eppa_item3">Support in control and structuring of digital records.
+                                </li>
+                                <li data-i18n="exp_eppa_item4">Delivering a talk on digital transformation and strategic
+                                    use of technologies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <!-- ============================================== -->
+        <!--                PROJECTS SECTION                -->
+        <!-- ============================================== -->
+        <section id="projects" class="section reveal anim-section anim-fade-up">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;" data-i18n="projects_title">
+                    Selected Projects</h2>
+
+                <div class="projects-minimal-grid">
+                    <!-- Project 1 -->
+                    <div class="minimal-project-card emerald-theme">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_1_title">AI Business Intelligence System</h3>
+                        <p class="min-project-desc" data-i18n="proj_1_desc">Business Intelligence platform focused on
+                            analyzing support tickets
+                            to improve operational efficiency and data-driven decision-making through interactive
+                            dashboards.</p>
+                        <div class="min-project-tech">
+                            <span>Power BI</span>
+                            <span>Data Analytics</span>
+                            <span>Business Intelligence</span>
+                        </div>
+                        <a href="project-detail.html?id=ai-bi-system" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="minimal-project-card purple-theme">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_2_title">BioWaterSTEAM Frontend</h3>
+                        <p class="min-project-desc" data-i18n="proj_2_desc">Real-time web interface for monitoring water
+                            quality using IoT
+                            sensors, enabling fast and intuitive visualization of pH, TDS, and temperature data.</p>
+                        <div class="min-project-tech">
+                            <span>IoT</span>
+                            <span>Real-Time Data</span>
+                            <span>Web Dashboard</span>
+                        </div>
+                        <a href="project-detail.html?id=web-system" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 3: BioWaterSTEAM API -->
+                    <div class="minimal-project-card rose-theme">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_3_title">BioWaterSTEAM API</h3>
+                        <p class="min-project-desc" data-i18n="proj_3_desc">Backend system for real-time water quality
+                            monitoring, enabling data
+                            collection and integration from IoT devices.</p>
+                        <div class="min-project-tech">
+                            <span>Node.js</span>
+                            <span>REST API</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="project-detail.html?id=biowater-api" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 4: Management Dashboard Module -->
+                    <div class="minimal-project-card teal-theme" data-project="management-dashboard">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_4_title">Management Dashboard Module</h3>
+                        <p class="min-project-desc" data-i18n="proj_4_desc">Enterprise management module that integrates
+                            external billing data
+                            to provide financial insights and decision-making support.</p>
+                        <div class="min-project-tech">
+                            <span>Java EE</span>
+                            <span>SQL</span>
+                            <span>Business Systems</span>
+                        </div>
+                        <a href="project-detail.html?id=management-dashboard" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 5: AI Football Prediction System -->
+                    <div class="minimal-project-card emerald-theme" data-project="football-prediction">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_5_title">AI Football Prediction System</h3>
+                        <p class="min-project-desc" data-i18n="proj_5_desc">Machine Learning system that analyzes
+                            historical match data to
+                            predict football results using multiple models and data-driven techniques.</p>
+                        <div class="min-project-tech">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>Data Science</span>
+                        </div>
+                        <a href="project-detail.html?id=football-prediction" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 6: Infrastructure Monitoring Dashboard -->
+                    <div class="minimal-project-card purple-theme" data-project="infra-monitoring">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_6_title">Infrastructure Monitoring Dashboard</h3>
+                        <p class="min-project-desc" data-i18n="proj_6_desc">Interactive Power BI dashboard for analyzing
+                            servers, clients, and
+                            services, enabling real-time insights and optimized operational decision-making.</p>
+                        <div class="min-project-tech">
+                            <span>Power BI</span>
+                            <span>Data Visualization</span>
+                            <span>Analytics</span>
+                        </div>
+                        <a href="project-detail.html?id=infra-monitoring" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 7: Parking Management System -->
+                    <div class="minimal-project-card hidden-project emerald-theme" data-project="parking-system">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_7_title">Parking Management System</h3>
+                        <p class="min-project-desc" data-i18n="proj_7_desc">Application designed to manage parking
+                            spaces and vehicle flow,
+                            enabling efficient control of entries, exits, and space utilization.</p>
+                        <div class="min-project-tech">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>Desktop App</span>
+                        </div>
+                        <a href="project-detail.html?id=parking-system" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 8: AulaManager Academic System -->
+                    <div class="minimal-project-card hidden-project rose-theme" data-project="aulamanager">
+                        <div class="card-accent-dot"></div>
+                        <h3 class="min-project-title" data-i18n="proj_8_title">AulaManager Academic System</h3>
+                        <p class="min-project-desc" data-i18n="proj_8_desc">Basic academic management system built with
+                            a multi-layer
+                            architecture, integrating a REST API and MVC web application for structured data handling.
+                        </p>
+                        <div class="min-project-tech">
+                            <span>.NET</span>
+                            <span>REST API</span>
+                            <span>MVC</span>
+                        </div>
+                        <a href="project-detail.html?id=aulamanager" class="min-project-link">
+                            <span data-i18n="proj_view">View Project</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="projects-actions" style="display: flex; justify-content: center; margin-top: 3.5rem;">
+                    <button class="btn btn-outline" id="toggle-projects-btn"
+                        style="padding: 0.8rem 2rem; display: flex; align-items: center; gap: 0.6rem; font-weight: 600;">
+                        <span id="toggle-projects-text" data-i18n="show_more">Show More</span>
+                        <i data-lucide="chevron-down" id="toggle-projects-icon"
+                            style="transition: transform 0.3s ease;"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <!-- ============================================== -->
+        <!--             CERTIFICATIONS SECTION             -->
+        <!-- ============================================== -->
+        <section id="certifications" class="section reveal anim-section anim-fade-up">
+            <div class="container">
+                <h2 class="section-title" data-i18n="certs_title">Certifications & Training</h2>
+                <div class="cert-carousel-wrapper">
+                    <div class="swiper cert-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1: Power BI (Mar 2026) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-daxus">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="bar-chart-2" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Daxus Latam</span>
+                                    </div>
+                                    <h3 class="cert-title" title="Career Accelerator with Power BI + AI">Career Accelerator with Power BI + AI</h3>
+                                    <p class="cert-date" data-i18n="cert_2_date">Issued: Mar 2026</p>
+                                    <p class="cert-hours" data-i18n="cert_2_hours"><i data-lucide="clock"></i> Duration: 8h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQBdYwqSTw3-RqbEP9WqsLYiAdTrLcEXUBInc57j5arpKEE?e=buP91d"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: AENIT 2025 (May 2025) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-utn">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="zap" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Universidad Técnica del Norte</span>
+                                    </div>
+                                    <h3 class="cert-title" title="VII Congreso Internacional en Ingeniería Aplicada e Innovación AENIT 2025">VII Congreso Internacional en Ingeniería Aplicada e Innovación AENIT 2025</h3>
+                                    <p class="cert-date" data-i18n="cert_11_date">Issued: May 2025</p>
+                                    <p class="cert-hours" data-i18n="cert_11_hours"><i data-lucide="clock"></i> Duration: 40h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQCk4NQOBSzQTJjGzFeaf4NaAXAf3Wfn9gdWwD1HvGD3ct0?e=sU1VTY"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: AWS ML (Jan 2025) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-aws">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="brain-circuit" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">AWS Academy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="AWS Academy Graduate - Machine Learning Foundations - Training Badge">AWS Academy Graduate - Machine Learning Foundations - Training Badge</h3>
+                                    <p class="cert-date" data-i18n="cert_6_date">Issued: Jan 2025</p>
+                                    <p class="cert-hours" data-i18n="cert_6_hours"><i data-lucide="clock"></i> Duration: 20h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQC6c4o7SMYtQ7ExHKZv_PKDAd-pFf8VzsUDobPwfK_XZc4?e=CIDwl1"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: AENIT 2024 (Jul 2024) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-utn">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="settings" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Universidad Técnica del Norte</span>
+                                    </div>
+                                    <h3 class="cert-title" title="Congreso Internacional de Ingeniería Aplicada y Tecnologías Innovadoras, AENIT 2024">Congreso Internacional de Ingeniería Aplicada y Tecnologías Innovadoras, AENIT 2024</h3>
+                                    <p class="cert-date" data-i18n="cert_10_date">Issued: Jul 2024</p>
+                                    <p class="cert-hours" data-i18n="cert_10_hours"><i data-lucide="clock"></i> Duration: 40h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQCkjsZnr_j1QI6RtaRlylMFAWEFhMBKzgWKtP6a36qvspc?e=8CpO7n"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5: AWS Cloud Foundations (Jun 2024) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-aws">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="cloud" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">AWS Academy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="AWS Academy Graduate - Cloud Foundations">AWS Academy Graduate - Cloud Foundations</h3>
+                                    <p class="cert-date" data-i18n="cert_1_date">Issued: Jun 2024</p>
+                                    <p class="cert-hours" data-i18n="cert_1_hours"><i data-lucide="clock"></i> Duration: 20h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQBD7Zy7Fr1oSYYY_ipYQcrZAe34XGHmFUfHuSwiWcX5Nvo?e=307MEU"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 6: Cyber Threat (Jan 2024) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-cisco">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="shield-check" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Cisco Networking Academy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="Cyber Threat Management">Cyber Threat Management</h3>
+                                    <p class="cert-date" data-i18n="cert_4_date">Issued: Jan 2024</p>
+                                    <p class="cert-hours" data-i18n="cert_4_hours"><i data-lucide="clock"></i> Duration: 20h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQCZiYTRuhkOTaUkA6DsBqRoAcGxsk-GQU99_e5V2bfOnwc?e=of9oOm"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 7: Network Defense (Jan 2024) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-cisco">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="shield-check" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Cisco Networking Academy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="Network Defense">Network Defense</h3>
+                                    <p class="cert-date" data-i18n="cert_7_date">Issued: Jan 2024</p>
+                                    <p class="cert-hours" data-i18n="cert_7_hours"><i data-lucide="clock"></i> Duration: 20h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQCwcz3finmqTL99q3zKCh2xAVW6B-69X3bS6BzN__wACBQ?e=krIzg3"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 8: AENIT 2023 (Nov 2023) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-utn">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="cpu" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Universidad Técnica del Norte</span>
+                                    </div>
+                                    <h3 class="cert-title" title="International Conference on Applied Engineering and Innovative Technologies AENIT 2023">International Conference on Applied Engineering and Innovative Technologies AENIT 2023</h3>
+                                    <p class="cert-date" data-i18n="cert_12_date">Issued: Nov 2023</p>
+                                    <p class="cert-hours" data-i18n="cert_12_hours"><i data-lucide="clock"></i> Duration: 40h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQChmov_zmIiSasrTa_SAK6EAXfPiA5yD_ukTNOdX4JrAQU?e=Cnyh51"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 9: Intro Cybersecurity (Nov 2023) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-cisco">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="lock" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Cisco Networking Academy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="Introduction to Cybersecurity">Introduction to Cybersecurity</h3>
+                                    <p class="cert-date" data-i18n="cert_5_date">Issued: Nov 2023</p>
+                                    <p class="cert-hours" data-i18n="cert_5_hours"><i data-lucide="clock"></i> Duration: 10h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQDRz7EWTLR1SoPO2-qxYvbPAcfMruFwSWNmcCwqo6B9axk?e=sHbi1W"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 10: Scrum Foundation (Jun 2023) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-certiprof">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="users" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">CertiProf</span>
+                                    </div>
+                                    <h3 class="cert-title" title="SCRUM Foundation Professional Certificate SFPC">SCRUM Foundation Professional Certificate SFPC</h3>
+                                    <p class="cert-date" data-i18n="cert_8_date">Issued: Jun 2023</p>
+                                    <p class="cert-hours" data-i18n="cert_8_hours"><i data-lucide="clock"></i> Duration: 16h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQBXuOkoBaEUS6swwRrTOVeEAbw0kPo7t_u2KHnVHbKX2dQ?e=lB8xjx"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 11: Linux Essentials (Jul 2022) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-cisco">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="terminal" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Cisco Networking Academy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="NDG Linux Essentials">NDG Linux Essentials</h3>
+                                    <p class="cert-date" data-i18n="cert_9_date">Issued: Jul 2022</p>
+                                    <p class="cert-hours" data-i18n="cert_9_hours"><i data-lucide="clock"></i> Duration: 40h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQBBROcPdKb-Sq5umqPgp5ujAdvcaMlZvQ0BMShyEOq59PI?e=hlJ9t5"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 12: Web Design (May 2022) -->
+                            <div class="swiper-slide">
+                                <div class="glass-card cert-card brand-udemy">
+                                    <div class="cert-header">
+                                        <div class="cert-icon-wrapper">
+                                            <i data-lucide="monitor" class="cert-icon"></i>
+                                        </div>
+                                        <span class="cert-issuer">Udemy</span>
+                                    </div>
+                                    <h3 class="cert-title" title="Web Design from Scratch to Advanced 45h COMPLETE Course">Web Design from Scratch to Advanced 45h COMPLETE Course</h3>
+                                    <p class="cert-date" data-i18n="cert_3_date">Issued: May 2022</p>
+                                    <p class="cert-hours" data-i18n="cert_3_hours"><i data-lucide="clock"></i> Duration: 45h</p>
+                                    <a href="https://utneduec-my.sharepoint.com/:b:/g/personal/ajlandazurir_utn_edu_ec/IQBohzlqQvbMSIy3n_ZyHI5jAVmrMN2cCsSxo6rSHkatNsw?e=clTnbN"
+                                        target="_blank" rel="noopener noreferrer" class="cert-btn"
+                                        data-i18n="cert_view_btn">View Credential <i
+                                            data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Controls moved outside the Swiper div -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <!-- ============================================== -->
+        <!--                CONTACT SECTION                 -->
+        <!-- ============================================== -->
+        <section id="contact" class="section reveal anim-section anim-fade-up">
+            <div class="aurora-blob blob-contact"></div>
+            <div class="container">
+                <div class="contact-split-layout reveal">
+                    <div class="contact-info-column">
+                        <div class="connect-card glass-card align-left reveal">
+                            <div class="card-header-dashboard">
+                                <span class="mini-label main-contact-label" data-i18n="contact_label">LET'S WORK
+                                    TOGETHER</span>
+                                <p class="card-dashboard-desc" data-i18n="contact_desc">
+                                    I am currently open to new opportunities, collaborations, or professional
+                                    inquires. Feel free to reach out to discuss potential projects or just say hi!
+                                </p>
+
+                                <div class="contact-data-grid">
+                                    <a href="mailto:andylandazuri05@gmail.com" class="contact-data-item"
+                                        style="text-decoration: none;">
+                                        <div class="Btn-custom Btnmail">
+                                            <span class="svgContainer">
+                                                <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1.4em"
+                                                    viewBox="0 0 512 512">
+                                                    <path
+                                                        d="M64 112c-8.8 0-16 7.2-16 16v22.1L272 288l224-137.9V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L272 336 48 212.2z" />
+                                                </svg>
+                                            </span>
+                                            <span class="BG"></span>
+                                        </div>
+                                        <div class="data-text">
+                                            <span class="data-label" data-i18n="contact_mail_label">MAIL</span>
+                                            <span class="data-value">andylandazuri05@gmail.com</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://maps.app.goo.gl/Ks73tGuyVb4cPVJXA" target="_blank"
+                                        rel="noopener noreferrer" class="contact-data-item"
+                                        style="text-decoration: none;">
+                                        <div class="Btn-custom Btnlocation">
+                                            <span class="svgContainer">
+                                                <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1.4em"
+                                                    viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+                                                </svg>
+                                            </span>
+                                            <span class="BG"></span>
+                                        </div>
+                                        <div class="data-text">
+                                            <span class="data-label" data-i18n="contact_location_label">LOCATION</span>
+                                            <span class="data-value">Calle de las Brevas E9-92 y Mariano Coronel -
+                                                Quito - Pichincha</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="dashboard-divider"></div>
+
+                                <div class="dashboard-socials">
+                                    <span class="mini-label" data-i18n="contact_socials_label">FIND ME ON</span>
+                                    <div class="social-icon-row">
+                                        <!-- LinkedIn -->
+                                        <a href="https://www.linkedin.com/in/andylandazuri"
+                                            class="Btn-custom Btnlinkedin" title="LinkedIn" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <span class="svgContainer">
+                                                <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1.4em"
+                                                    viewBox="0 0 448 512">
+                                                    <path
+                                                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                </svg>
+                                            </span>
+                                            <span class="BG"></span>
+                                        </a>
+
+                                        <!-- GitHub -->
+                                        <a href="https://github.com/ajlandazuri" class="Btn-custom Btngithub"
+                                            title="GitHub" target="_blank" rel="noopener noreferrer">
+                                            <span class="svgContainer">
+                                                <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1.4em"
+                                                    viewBox="0 0 496 512">
+                                                    <path
+                                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                                                </svg>
+                                            </span>
+                                            <span class="BG"></span>
+                                        </a>
+
+                                        <!-- WhatsApp -->
+                                        <a href="https://wa.me/593997782988" class="Btn-custom Btnwhatsapp"
+                                            title="WhatsApp" target="_blank" rel="noopener noreferrer">
+                                            <span class="svgContainer">
+                                                <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1.4em"
+                                                    viewBox="0 0 448 512">
+                                                    <path
+                                                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-93.7-25.7l-6.7-4-69.6 18.3 18.7-67.9-4.4-7c-18.4-29.4-28.1-63.3-28.1-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.4 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.2-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.6 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.4-29.8-17-40.7-4.5-10.9-9.1-9.4-12.4-9.5H176c-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                                                </svg>
+                                            </span>
+                                            <span class="BG"></span>
+                                        </a>
+
+                                        <!-- Telegram -->
+                                        <a href="https://t.me/+593997782988" class="Btn-custom Btntelegram"
+                                            title="Telegram" target="_blank" rel="noopener noreferrer">
+                                            <span class="svgContainer">
+                                                <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1.4em"
+                                                    viewBox="0 0 496 512">
+                                                    <path
+                                                        d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                                                </svg>
+                                            </span>
+                                            <span class="BG"></span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="availability-info-card">
+                                    <div class="status-pill">
+                                        <span class="status-dot pulse"></span>
+                                        <span data-i18n="badge_ready">I'M READY</span>
+                                    </div>
+                                    <p class="status-details" data-i18n="badge_ready_desc">
+                                        Open to freelance projects, internships, or full-time
+                                        opportunities. Ready to start immediately.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: 3D Object -->
+                <div class="contact-3d-column">
+                    <script type="module"
+                        src="https://unpkg.com/@splinetool/viewer@1.12.86/build/spline-viewer.js"></script>
+                    <spline-viewer url="https://prod.spline.design/9Ss4oOxpQm5HKTTy/scene.splinecode"></spline-viewer>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p class="footer-text" data-i18n="footer_text">&copy; 2026 Andy Jhoel Landázuri Ruales | Software Engineer
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="translations.js?v=3"></script>
+    <script src="i18n-core.js?v=3"></script>
+    <script src="projects-data.js?v=1"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
