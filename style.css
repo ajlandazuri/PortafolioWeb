@@ -3444,6 +3444,10 @@ nav {
         margin: 0 auto;
     }
 
+    .hero-actions {
+        justify-content: center;
+    }
+
     .about-stats-horizontal {
         grid-template-columns: 1fr;
         gap: 1.25rem;
