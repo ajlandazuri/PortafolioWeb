@@ -3497,7 +3497,7 @@ nav {
 
     .mobile-nav-toggle {
         display: block;
-        justify-self: center;
+        justify-self: end;
     }
 
     nav {
