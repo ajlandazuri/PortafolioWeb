@@ -12,7 +12,7 @@ const translations = {
         hero_description: "I design and implement technological solutions focused on problem-solving and process optimization across various environments.",
         hero_btn_projects: "View Projects",
         hero_btn_contact: "Contact Me",
-        hero_typewriter: ["Software Engineer | Data Analytics | SQL | Power BI"],
+        hero_typewriter: ["Full Stack Developer | Data Analytics | SQL | Cybersecurity"],
 
         about_title: "About Me",
         about_subtitle: "Building efficient and scalable solutions",
@@ -161,7 +161,7 @@ const translations = {
         hero_description: "Diseño e implemento soluciones tecnológicas orientadas a la resolución de problemas y la optimización de procesos en diversos entornos.",
         hero_btn_projects: "Ver Proyectos",
         hero_btn_contact: "Contactarme",
-        hero_typewriter: ["Ingeniero de Software | Data Analytics | SQL | Power BI"],
+        hero_typewriter: ["Desarrollador Full Stack | Analítica de Datos | SQL | Ciberseguridad"],
 
         about_title: "Sobre Mí",
         about_subtitle: "Construyendo soluciones eficientes y escalables",

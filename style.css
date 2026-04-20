@@ -531,6 +531,8 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -539,6 +541,7 @@ body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     position: relative;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -3663,9 +3666,11 @@ nav {
     }
 
     .contact-3d-column spline-viewer {
-        width: 1200px !important;
-        height: 1200px !important;
-        transform: scale(0.55) !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 450px;
+        max-height: 450px;
+        transform: scale(0.8) !important;
         transform-origin: center;
         clip-path: circle(42% at 50% 50%) !important;
     }
@@ -3719,6 +3724,60 @@ nav {
 
     .cert-carousel-wrapper .swiper-pagination {
         bottom: 0 !important;
+    }
+
+    /* === Experience Timeline Mobile === */
+    .timeline::before {
+        left: 18px;
+    }
+
+    .timeline-item {
+        width: 100% !important;
+        padding-left: 45px !important;
+        padding-right: 0 !important;
+        left: 0 !important;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0 !important;
+        text-align: left !important;
+        transform: translateX(20px);
+    }
+
+    .timeline-item.anim-visible {
+        transform: translateX(0);
+    }
+
+    .timeline-dot {
+        left: 9px !important;
+        right: auto !important;
+        top: 2.2rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 9px !important;
+        right: auto !important;
+    }
+
+    .timeline-date {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content .role {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-details li {
+        font-size: 0.8rem;
     }
 }
 
@@ -5053,16 +5112,18 @@ nav {
     }
 
     .contact-3d-column spline-viewer {
-        width: 1200px !important;
-        height: 1200px !important;
-        transform: scale(0.65) !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 500px;
+        max-height: 500px;
+        transform: scale(1.2) !important;
         transform-origin: center !important;
     }
 }
 
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 768px) {
-    .cont .contact-3d-column spline-viewer {
-        transform: scale(0.45) !important;
+    .contact-3d-column spline-viewer {
+        transform: scale(0.8) !important;
     }
 }

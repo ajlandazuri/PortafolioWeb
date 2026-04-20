@@ -1,4 +1,4 @@
-﻿const projectsData = {
+const projectsData = {
     "ai-bi-system": {
         en: {
             title: "AI Business Intelligence System for Ticket Management",
@@ -249,7 +249,7 @@
                 "MVC-based web interface",
                 "Separation of concerns for scalability"
             ],
-            role: "Full Stack Developer",
+            role: "Software Engineer",
             type: "Academic System",
             status: "Completed"
         },
@@ -262,7 +262,7 @@
                 "Interfaz web MVC",
                 "Separación de responsabilidades"
             ],
-            role: "Desarrollador Full Stack",
+            role: "Ingeniero de Software",
             type: "Sistema Académico",
             status: "Completado"
         },
