@@ -3674,6 +3674,12 @@ nav {
     z-index: 1001;
     padding: 0.5rem;
     transition: var(--transition-base);
+    /* Center the icons */
+    display: none; /* Default hidden */
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
 }
 
 .mobile-nav-toggle .close-icon {
@@ -3770,7 +3776,7 @@ nav {
     }
 
     .mobile-nav-toggle {
-        display: block;
+        display: flex; /* Changed from block to flex for centering */
         justify-self: end;
     }
 
@@ -3791,7 +3797,7 @@ nav {
         flex-direction: column;
         align-items: center;
         gap: 1.2rem;
-        margin-top: auto;
+        margin-top: 3rem; /* Fixed margin instead of auto to stay near Contact */
         padding-bottom: 4rem;
         width: 100%;
         padding-top: 2rem;
@@ -3895,6 +3901,20 @@ nav {
 
     [data-theme="light"] .nav-menu-wrapper.mobile-active .nav-cv-wrapper .nav-btn-pill i {
         color: #0e59c2 !important;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        position: fixed !important;
+        top: 2rem !important;
+        right: 0 !important;
+        width: 80% !important; /* Match drawer width */
+        max-width: 300px !important; /* Match drawer max-width */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background: transparent !important;
+        transform: none !important;
+        z-index: 1002;
     }
 
     .mobile-nav-toggle[aria-expanded="true"] .menu-icon {
