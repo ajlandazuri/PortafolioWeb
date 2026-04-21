@@ -79,6 +79,31 @@
     --tech-accent: #ffffff;
 }
 
+/* === 2. BASE & RESET === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
 /* ================================================================
    LIGHT MODE — UNIFIED DESIGN SYSTEM v2.0
    Base: Steel Lead (#b0bec5) | SaaS Premium | Zero Pure White
@@ -102,6 +127,7 @@
     --tech-accent: #0d47a1;
     --glass-bg: rgba(23, 26, 75, 0.347) !important;
 }
+
 
 [data-theme="light"] .mini-label {
     color: var(--accent-primary) !important;
@@ -504,23 +530,21 @@
     color: #38bdf8 !important;
 }
 
-/* --- Custom Scrollbar --- */
+/* --- Custom Scrollbar - Hidden for Clean Aesthetic --- */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 0px;
+    background: transparent;
 }
 
-::-webkit-scrollbar-track {
-    background: var(--bg-primary);
+* {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--glass-border);
-    border-radius: 10px;
-    border: 2px solid var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-primary);
+    background: transparent;
 }
 
 * {
@@ -964,8 +988,9 @@ a {
 /* --- Layout Utilities --- */
 .container {
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 0 1.5rem;
+    width: 100%;
 }
 
 .section {
@@ -1057,6 +1082,11 @@ a {
 }
 
 @media (max-width: 1200px) {
+    .container {
+        padding: 0 4rem !important;
+        /* Move content away from edges for better centering */
+    }
+
     .about-main-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -1064,7 +1094,7 @@ a {
             "bio photo"
             "info photo"
             "btns photo";
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .bio-info-col {
@@ -1077,7 +1107,8 @@ a {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1350px) {
+
     /* Hero Center Fix */
     .hero-grid {
         display: flex !important;
@@ -1116,7 +1147,29 @@ a {
 
     .hero-visual-dotlottie {
         transform: scale(1.1) !important;
+        /* Maintaining the exact desktop scale when centered */
         margin: 0 auto !important;
+    }
+
+    /* Elegant Thin Stat Cards on Responsive */
+    .stat-card-h {
+        padding: 0.8rem 1.2rem !important;
+        min-height: 85px !important;
+        gap: 1.2rem !important;
+    }
+
+    .stat-icon-h {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.4rem !important;
+    }
+
+    .stat-number-h {
+        font-size: 1.25rem !important;
+    }
+
+    .stat-label-h {
+        font-size: 0.75rem !important;
     }
 
     /* About Center Fix */
@@ -1167,6 +1220,35 @@ a {
         gap: 1rem !important;
         margin: 2rem auto !important;
         width: 100% !important;
+    }
+
+    .hero-visual,
+    .about-photo {
+        justify-content: center !important;
+        /* Center on mobile */
+    }
+
+    /* Target mobile specifically for even lower height */
+}
+
+@media (max-width: 768px) {
+    .stat-card-h {
+        padding: 0.8rem 1.25rem !important;
+        min-height: 0 !important; /* Allow it to be as thin as possible */
+        height: auto !important;
+        flex-direction: row !important; /* Force horizontal layout for 'thin' look */
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+
+    .stat-icon-h {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.4rem !important;
+    }
+
+    .stat-info-h {
+        text-align: left !important;
     }
 }
 
@@ -1747,29 +1829,37 @@ nav {
 
 /* --- Hero Section --- */
 .hero {
-    min-height: 85vh;
+    min-height: 90vh;
+    /* Increased height for bigger visual */
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 220px;
     padding-bottom: var(--section-padding);
     background: transparent;
-    overflow: hidden;
+    overflow: visible;
+    /* Allow the massive robot scale to breathe */
 }
 
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 600px;
+    flex: 1 1 550px;
+    /* Take available space, but don't shrink below 550px if possible */
+    max-width: 700px;
+    padding-left: 0;
+    /* Resetting nudge to use margin for precision */
     z-index: 10;
 }
 
@@ -1795,7 +1885,8 @@ nav {
 .hero-description {
     font-size: 1.05rem;
     color: var(--text-secondary);
-    max-width: 580px;
+    max-width: 800px;
+    /* Significant widening */
     line-height: 1.75;
     opacity: 0.9;
     margin-bottom: 2rem;
@@ -1879,6 +1970,20 @@ nav {
 
 .hero .hero-visual.reveal {
     transition-delay: 0.7s;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 400px;
+    /* Maintain the perfect 400px size */
+}
+
+.visual-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    pointer-events: none;
 }
 
 /* --- Available For New Project Button --- */
@@ -2024,13 +2129,14 @@ nav {
 }
 
 .hero-visual-dotlottie {
-    width: 100%;
-    height: auto;
-    max-height: 75vh;
+    width: 400px !important;
+    height: 400px !important;
     mix-blend-mode: screen;
-    opacity: 0.95;
+    opacity: 0.98;
     transform: scale(1.1);
+    /* Removed horizontal nudge for better centering when wrapped */
     transform-origin: center center;
+    display: block;
 }
 
 /* --- About Section --- */
@@ -2055,7 +2161,8 @@ nav {
         "bio photo"
         "info photo"
         "btns photo";
-    gap: 4rem;
+    gap: 3rem;
+    /* Cohesive gap */
     align-items: center;
     margin-bottom: 6rem;
 }
@@ -2096,7 +2203,8 @@ nav {
 .about-photo {
     grid-area: photo;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    /* Align photo to the right edge */
     align-items: center;
     margin-top: 2rem;
 }
@@ -3974,11 +4082,7 @@ nav {
         height: 300px;
     }
 
-    .stat-card-h {
-        padding: 1.25rem;
-        flex-direction: column;
-        text-align: center;
-    }
+    /* Removed conflicting/redundant stat-card-h override */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -5284,6 +5388,67 @@ nav {
         max-height: 500px;
         transform: scale(1.2) !important;
         transform-origin: center !important;
+    }
+}
+
+/* ============================================================ */
+/* FINAL DEFINITIVE RESPONSIVE FIXES (Consolidated)             */
+/* ============================================================ */
+@media (max-width: 1350px) {
+    .about-stats-horizontal {
+        gap: 1rem !important; /* Tight vertical distance */
+        margin-top: 2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .stat-link-h {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .stat-card-h {
+        padding: 0.8rem 1.25rem !important;
+        min-height: 100px !important; /* Uniform height for all cards */
+        height: 100% !important;
+        flex-direction: row !important; /* Keep it thin and horizontal */
+        align-items: center !important;
+        gap: 1.2rem !important;
+    }
+
+    .stat-icon-h {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.4rem !important;
+    }
+
+    .stat-info-h {
+        text-align: left !important;
+    }
+
+    .stat-number-h {
+        font-size: 1.25rem !important;
+    }
+
+    .stat-label-h {
+        font-size: 0.75rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-card-h {
+        padding: 0.7rem 1rem !important;
+        gap: 0.8rem !important;
+    }
+    
+    .stat-icon-h {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1.2rem !important;
     }
 }
 
