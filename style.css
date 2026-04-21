@@ -1157,30 +1157,19 @@ a {
     font-size: 0.78rem;
     font-weight: 600;
     margin-left: 0 !important;
+    color: var(--text-secondary);
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    width: max-content;
+    cursor: default;
 }
 
 .info-pill i {
     width: 1.2rem;
+    height: 16px;
     display: flex;
     justify-content: center;
-    color: var(--text-secondary);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    white-space: nowrap;
-    width: max-content;
-}
-
-.info-pill:hover {
-    background: rgba(56, 189, 248, 0.1);
-    border-color: var(--accent-primary);
-    color: var(--text-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.info-pill i {
-    width: 16px;
-    height: 16px;
+    align-items: center;
     color: var(--accent-primary);
 }
 
