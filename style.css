@@ -1859,7 +1859,7 @@ nav {
     /* Take available space, but don't shrink below 550px if possible */
     max-width: 700px;
     padding-left: 0;
-    /* Resetting nudge to use margin for precision */
+    margin-left: 2.5rem;
     z-index: 10;
 }
 
@@ -5030,6 +5030,7 @@ nav {
 .data-text {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .data-label {
@@ -5057,6 +5058,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    text-align: left;
 }
 
 .social-icon-row {
