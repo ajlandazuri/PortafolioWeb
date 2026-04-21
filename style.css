@@ -3989,24 +3989,30 @@ nav {
 
     /* Certifications Mobile Refinement */
     .cert-carousel-wrapper {
-        padding: 0 45px !important; /* Reduced from 60px to give more space to cards */
+        padding: 0 10px !important; /* Drastically reduced to give max space to cards */
         margin: 1rem 0 2rem !important;
     }
 
+    .cert-swiper {
+        padding: 3rem 0.2rem 5rem 0.2rem !important; /* Minimized horizontal padding */
+        width: 100% !important;
+    }
+
     .cert-card {
-        min-height: 260px !important;
+        min-height: 250px !important;
         aspect-ratio: auto !important;
-        padding: 1.5rem 1rem !important;
+        padding: 1.5rem 1.25rem !important;
+        width: 100% !important;
     }
 
     .cert-title {
-        font-size: 1.05rem !important; /* Reduced from 1.4rem to prevent massive wrapping */
+        font-size: 1.1rem !important;
         line-height: 1.4;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .cert-issuer {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
 
     .cert-carousel-wrapper .swiper-button-next,
