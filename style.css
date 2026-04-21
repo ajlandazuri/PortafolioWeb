@@ -3217,8 +3217,8 @@ nav {
     opacity: 0.8;
 }
 
-.connect-card.align-left {
-    text-align: left;
+.connect-card.align-center {
+    text-align: center;
 }
 
 /* New Modern Header Layout */
@@ -4971,6 +4971,8 @@ nav {
 }
 
 .main-contact-label {
+    display: block; /* Ensure it takes full width for centering */
+    text-align: center;
     font-size: 1rem;
     font-weight: 800;
     color: var(--accent-primary);
