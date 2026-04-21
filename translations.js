@@ -30,6 +30,10 @@ const translations = {
         stat_certs_desc: "Internationally validated",
         stat_exp_label: "Years Experience",
         stat_exp_desc: "Professional growth",
+        stat_english_label: "English Proficiency",
+        stat_english_desc: "B1 Level",
+        stat_license_label: "Driver's License",
+        stat_license_desc: "Type B",
 
         skills_title: "Skills Details",
         filter_all: "All",
@@ -182,6 +186,10 @@ const translations = {
         stat_certs_desc: "Validadas internacionalmente",
         stat_exp_label: "Años de Experiencia",
         stat_exp_desc: "Crecimiento profesional",
+        stat_english_label: "Nivel de Inglés",
+        stat_english_desc: "Nivel B1",
+        stat_license_label: "Licencia de Conducir",
+        stat_license_desc: "Tipo B",
 
         skills_title: "Detalle de Habilidades",
         filter_all: "Todo",

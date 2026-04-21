@@ -1058,7 +1058,7 @@ a {
 
 @media (max-width: 1200px) {
     .about-main-grid {
-        grid-template-columns: 1fr 0.8fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "greeting photo"
             "bio photo"
@@ -1078,6 +1078,48 @@ a {
 }
 
 @media (max-width: 992px) {
+    /* Hero Center Fix */
+    .hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 3rem !important;
+    }
+
+    .hero-content {
+        align-items: center !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .hero-description {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .hero-actions {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .hero-tags {
+        justify-content: center !important;
+    }
+
+    .hero-visual {
+        order: 2 !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .hero-visual-dotlottie {
+        transform: scale(1.1) !important;
+        margin: 0 auto !important;
+    }
+
+    /* About Center Fix */
     .about-main-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -1117,61 +1159,19 @@ a {
         margin-bottom: 1.2rem !important;
     }
 
-    .bio-info-col {
-        order: 4 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 1rem !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 1.5rem auto !important;
-    }
-
     .about-btns {
-        order: 5 !important;
+        order: 4 !important;
         display: flex !important;
         justify-content: center !important;
         flex-wrap: wrap !important;
         gap: 1rem !important;
         margin: 2rem auto !important;
+        width: 100% !important;
     }
 }
 
-/* --- Bio Info Pills --- */
-.bio-info-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-}
+/* Deprecated Info Pills - Removed */
 
-.info-pill {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 1.1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 100px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    margin-left: 0 !important;
-    color: var(--text-secondary);
-    backdrop-filter: blur(10px);
-    white-space: nowrap;
-    width: max-content;
-    cursor: default;
-}
-
-.info-pill i {
-    width: 1.2rem;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--accent-primary);
-}
 
 [data-theme="light"] .info-pill {
     background: rgba(14, 89, 194, 0.05);
@@ -1757,12 +1757,12 @@ nav {
     overflow: hidden;
 }
 
+
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    width: 100%;
 }
 
 .hero-content {
@@ -2029,8 +2029,8 @@ nav {
     max-height: 75vh;
     mix-blend-mode: screen;
     opacity: 0.95;
-    transform: scale(1.7) translateX(140px);
-    transform-origin: center right;
+    transform: scale(1.1);
+    transform-origin: center center;
 }
 
 /* --- About Section --- */
@@ -2055,10 +2055,9 @@ nav {
         "bio photo"
         "info photo"
         "btns photo";
-    gap: 1.5rem 2rem;
-    align-items: start;
+    gap: 4rem;
+    align-items: center;
     margin-bottom: 6rem;
-    width: 100%;
 }
 
 @media (min-width: 1400px) {
@@ -2083,7 +2082,8 @@ nav {
     grid-area: bio;
     display: flex;
     flex-direction: column;
-    min-width: 450px;
+    min-width: 0;
+    width: 100%;
 }
 
 .about-btns {
@@ -2191,20 +2191,36 @@ nav {
 
 
 .about-stats-horizontal {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.stat-link-h {
+    flex: 1 1 300px;
+    width: 100%;
+    max-width: 320px;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.stat-link-h.noclick {
+    cursor: default;
 }
 
 .stat-card-h {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 1.8rem 1.5rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 1.25rem;
     transition: all 0.3s ease;
+    height: 100%;
+    min-height: 135px;
 }
 
 .stat-card-h:hover {
@@ -3601,8 +3617,9 @@ nav {
     }
 
     .about-stats-horizontal {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
 }
 
