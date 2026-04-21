@@ -1043,6 +1043,145 @@ a {
     box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.15);
 }
 
+/* --- Bio Info Col --- */
+.bio-info-col {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    align-items: flex-start !important;
+    justify-content: center;
+    justify-self: start;
+}
+
+@media (max-width: 1200px) {
+    .about-main-grid {
+        grid-template-columns: 1fr 0.8fr;
+        grid-template-areas:
+            "greeting photo"
+            "bio photo"
+            "info photo"
+            "btns photo";
+        gap: 2rem;
+    }
+
+    .bio-info-col {
+        border: none;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-main-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2.5rem !important;
+        text-align: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .bio-greeting {
+        order: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 2rem !important;
+        text-align: center !important;
+    }
+
+    .about-photo {
+        order: 2 !important;
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        margin: 0 auto 2rem !important;
+        position: static !important;
+    }
+
+    .about-bio {
+        order: 3 !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto 1.5rem !important;
+        min-width: auto !important;
+    }
+
+    .about-bio p {
+        text-align: center !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    .bio-info-col {
+        order: 4 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 1.5rem auto !important;
+    }
+
+    .about-btns {
+        order: 5 !important;
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+        margin: 2rem auto !important;
+    }
+}
+
+/* --- Bio Info Pills --- */
+.bio-info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.info-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    width: max-content;
+}
+
+.info-pill:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-pill i {
+    width: 16px;
+    height: 16px;
+    color: var(--accent-primary);
+}
+
+[data-theme="light"] .info-pill {
+    background: rgba(14, 89, 194, 0.05);
+    border-color: rgba(14, 89, 194, 0.15);
+}
+
 /* --- Buttons --- */
 .btn {
     display: inline-flex;
@@ -1914,13 +2053,27 @@ nav {
 
 .about-main-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "greeting photo"
-        "bio photo";
-    gap: 2rem 6rem;
-    align-items: center;
+        "bio photo"
+        "info photo"
+        "btns photo";
+    gap: 1.5rem 2rem;
+    align-items: start;
     margin-bottom: 6rem;
+    width: 100%;
+}
+
+@media (min-width: 1400px) {
+    .about-main-grid {
+        grid-template-columns: 1.5fr auto 1fr;
+        grid-template-areas:
+            "greeting greeting photo"
+            "bio info photo"
+            "btns info photo";
+        gap: 1rem 1.5rem;
+    }
 }
 
 .bio-greeting {
@@ -1934,12 +2087,22 @@ nav {
     grid-area: bio;
     display: flex;
     flex-direction: column;
+    min-width: 450px;
+}
+
+.about-btns {
+    grid-area: btns;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .about-photo {
     grid-area: photo;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .about-bio p {
@@ -3403,28 +3566,18 @@ nav {
         --section-padding: 4.5rem;
     }
 
-    .hero-grid,
-    .about-main-grid {
+    .hero-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
         text-align: center;
     }
 
-    .about-main-grid {
-        grid-template-areas:
-            "greeting"
-            "photo"
-            "bio";
-    }
-
-    .hero-content,
-    .about-bio {
+    .hero-content {
         align-items: center;
         max-width: 100%;
     }
 
-    .hero-visual,
-    .about-photo {
+    .hero-visual {
         justify-content: center;
     }
 

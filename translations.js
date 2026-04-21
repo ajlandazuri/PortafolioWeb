@@ -20,6 +20,9 @@ const translations = {
         about_bio_1: "Software Engineer focused on developing efficient applications and designing technological solutions oriented towards problem-solving.",
         about_bio_2: "Passionate about creating functional, scalable, and well-structured systems, integrating different technologies to generate value and improve processes in diverse environments.",
         about_btn_skills: "View Skills",
+        about_btn_cv: "Download CV",
+        info_english: "English: B1 Level",
+        info_license: "Driver's License: Type B",
 
         stat_projects_label: "Developed Projects",
         stat_projects_desc: "Successful deliveries",
@@ -169,6 +172,9 @@ const translations = {
         about_bio_1: "Ingeniero de Software enfocado en el desarrollo de aplicaciones eficientes y el diseño de soluciones tecnológicas orientadas a la resolución de problemas.",
         about_bio_2: "Apasionado por crear sistemas funcionales, escalables y bien estructurados, integrando diferentes tecnologías para generar valor y mejorar procesos en distintos entornos.",
         about_btn_skills: "Ver Habilidades",
+        about_btn_cv: "Descargar CV",
+        info_english: "Inglés: Nivel B1",
+        info_license: "Licencia de Conducir: Tipo B",
 
         stat_projects_label: "Proyectos Desarrollados",
         stat_projects_desc: "Entregas exitosas",
