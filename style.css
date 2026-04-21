@@ -1086,7 +1086,7 @@ a {
         align-items: center !important;
         width: 100% !important;
     }
-    
+
     .bio-greeting {
         order: 1 !important;
         display: block !important;
@@ -1156,6 +1156,13 @@ a {
     border-radius: 100px;
     font-size: 0.78rem;
     font-weight: 600;
+    margin-left: 0 !important;
+}
+
+.info-pill i {
+    width: 1.2rem;
+    display: flex;
+    justify-content: center;
     color: var(--text-secondary);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
