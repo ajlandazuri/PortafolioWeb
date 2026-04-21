@@ -1122,6 +1122,7 @@ a {
         text-align: center !important;
         max-width: 100% !important;
         padding: 0 !important;
+        margin-left: 0 !important;
     }
 
     .hero-description {
@@ -1860,6 +1861,7 @@ nav {
     max-width: 700px;
     padding-left: 0;
     margin-left: 2.5rem;
+    margin-top: -3rem;
     z-index: 10;
 }
 
@@ -3701,6 +3703,7 @@ nav {
     .hero-content {
         align-items: center;
         max-width: 100%;
+        margin-left: 0;
     }
 
     .hero-visual {
