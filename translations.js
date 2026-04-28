@@ -43,7 +43,7 @@ const translations = {
         show_more: "Show More",
 
         experience_title: "Professional Experience",
-        exp_airmax_date: "June 2024 - March 2025",
+        exp_airmax_date: "June 2025 - March 2026",
         exp_airmax_title: "Business Intelligence Project",
         exp_airmax_role: "AIRMAXTELECOM S.A. — Degree Project",
         exp_airmax_desc: "Design and implementation of a Business Intelligence solution for ticket management system analysis, improving operational decision-making.",
@@ -52,7 +52,7 @@ const translations = {
         exp_airmax_item3: "Definition and calculation of KPIs for technical support analysis.",
         exp_airmax_item4: "Interactive dashboard design and evaluation through the UTAUT model.",
 
-        exp_flores_date: "November 2023 - December 2023",
+        exp_flores_date: "November 2025 - December 2025",
         exp_flores_title: "Internships — Commercial Area",
         exp_flores_role: "Importadora Automotriz Flores",
         exp_flores_desc: "Support in administrative processes and information management within the company's commercial area.",
@@ -199,7 +199,7 @@ const translations = {
         show_more: "Mostrar Más",
 
         experience_title: "Experiencia Profesional",
-        exp_airmax_date: "Junio 2024 - Marzo 2025",
+        exp_airmax_date: "Junio 2025 - Marzo 2026",
         exp_airmax_title: "Proyecto de Business Intelligence",
         exp_airmax_role: "AIRMAXTELECOM S.A. — Proyecto de Grado",
         exp_airmax_desc: "Diseño e implementación de una solución de Business Intelligence para el análisis del sistema de gestión de tickets, mejorando la toma de decisiones operativas.",
@@ -208,7 +208,7 @@ const translations = {
         exp_airmax_item3: "Definición y cálculo de KPIs para el análisis de soporte técnico.",
         exp_airmax_item4: "Diseño y evaluación de dashboards interactivos mediante el modelo UTAUT.",
 
-        exp_flores_date: "Noviembre 2023 - Diciembre 2023",
+        exp_flores_date: "Noviembre 2025 - Diciembre 2025",
         exp_flores_title: "Pasantías — Área Comercial",
         exp_flores_role: "Importadora Automotriz Flores",
         exp_flores_desc: "Apoyo en procesos administrativos y gestión de información dentro del área comercial de la empresa.",
