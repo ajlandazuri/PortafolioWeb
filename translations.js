@@ -43,7 +43,7 @@ const translations = {
         show_more: "Show More",
 
         experience_title: "Professional Experience",
-        exp_airmax_date: "June 2025 - March 2026",
+        exp_airmax_date: "December 2024 - February 2026",
         exp_airmax_title: "Business Intelligence Project",
         exp_airmax_role: "AIRMAXTELECOM S.A. — Degree Project",
         exp_airmax_desc: "Design and implementation of a Business Intelligence solution for ticket management system analysis, improving operational decision-making.",
@@ -199,7 +199,7 @@ const translations = {
         show_more: "Mostrar Más",
 
         experience_title: "Experiencia Profesional",
-        exp_airmax_date: "Junio 2025 - Marzo 2026",
+        exp_airmax_date: "Diciembre 2024 - Febrero 2026",
         exp_airmax_title: "Proyecto de Business Intelligence",
         exp_airmax_role: "AIRMAXTELECOM S.A. — Proyecto de Grado",
         exp_airmax_desc: "Diseño e implementación de una solución de Business Intelligence para el análisis del sistema de gestión de tickets, mejorando la toma de decisiones operativas.",
